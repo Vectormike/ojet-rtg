@@ -6,11 +6,45 @@
 /*
  * Your customer ViewModel code goes here
  */
-define([],
- function() {
+define(['knockout', 'ojs/ojbootstrap', 'ojs/ojarraydataprovider', 'ojs/ojknockout', 'ojs/ojtable'],
+ function(ko, Bootstrap, ArrayDataProvider) {
 
     function CustomerViewModel() {
       var self = this;
+      var self = this;
+
+    var deptArray = [
+      {
+        DepartmentId: 3,
+        DepartmentName: "ADFPM 1001 neverending",
+        LocationId: 200,
+        ManagerId: 300
+      },
+      {
+        DepartmentId: 5,
+        DepartmentName: "BB",
+        LocationId: 200,
+        ManagerId: 300
+      },
+
+      {
+        DepartmentId: 312022,
+        DepartmentName: "Purchasing14",
+        LocationId: 200,
+        ManagerId: 300
+      },
+      {
+        DepartmentId: 313022,
+        DepartmentName: "Human Resources15",
+        LocationId: 200,
+        ManagerId: 300
+      }
+    ];
+    self.dataprovider = new ArrayDataProvider(deptArray, {
+      keyAttributes: "DepartmentId",
+      implicitSort: [{ attribute: "DepartmentId", direction: "ascending" }]
+    });
+
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 
