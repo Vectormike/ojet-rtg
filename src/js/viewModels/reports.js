@@ -12,7 +12,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart'],
     function IncidentsViewModel() {
       var self = this;
 
-      var api = [
+      var api1 = [
         {
           name: "JavaScript",
           items: [62]
@@ -33,11 +33,37 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart'],
           name: "JAVA",
           items: [40]
         },
-        
-        
       ]
 
-      self.data = ko.observableArray(api)
+
+
+      var api2 = [
+        {
+          name: "Vscode",
+          items: [72]
+        },
+        {
+          name: "Sublime",
+          items: [40]
+        },
+        {
+          name: "Visual Studio",
+          items: [50]
+        },
+        {
+          name: "Atom",
+          items: [30]
+        },
+        {
+          name: "Netbeans",
+          items: [20]
+        },
+      ]
+
+
+      self.dataLang = ko.observableArray(api1);
+      self.dataEditor = ko.observableArray(api2)
+
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 
