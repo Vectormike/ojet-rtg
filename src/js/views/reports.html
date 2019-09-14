@@ -7,7 +7,14 @@
   <div>
     <oj-chart 
       type="pie" 
-      series="[[data]]">
+      hover-behavior="dim"
+      series="[[dataLang]]">
+    </oj-chart>
+
+    <oj-chart 
+      type="bar" 
+      hover-behavior="dim"
+      series="[[dataEditor]]">
     </oj-chart>
   </div>
 </div>
