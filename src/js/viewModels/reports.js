@@ -15,12 +15,26 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart'],
       var api = [
         {
           name: "JavaScript",
-          items: [42]
+          items: [62]
         },
         {
-          name: "JavaScript",
-          items: [42]
-        }
+          name: "Python",
+          items: [40]
+        },
+        {
+          name: "PHP",
+          items: [50]
+        },
+        {
+          name: "C#",
+          items: [30]
+        },
+        {
+          name: "JAVA",
+          items: [40]
+        },
+        
+        
       ]
 
       self.data = ko.observableArray(api)
